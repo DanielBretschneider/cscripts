@@ -6,7 +6,7 @@
 
 # Check if a filename was provided
 if [ -z "$1" ]; then
-    echo "Usage: $0 <file.c>"
+    echo "[*] run.sh: Usage: $0 <file.c>"
     exit 1
 fi
 
@@ -20,5 +20,5 @@ gcc -Wall -Wextra -o server server.c
 if [ $? -eq 0 ]; then
     ./"$filename"
 else
-    echo "Compilation failed. Fix errors and try again."
+    echo "[-] run.sh: Compilation failed. Fix errors and try again."
 fi
